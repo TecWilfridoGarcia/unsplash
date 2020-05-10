@@ -1,0 +1,23 @@
+@media only screen and (max-width : 768px) {
+    .nav-list__wrapper {
+        display: none;
+    }
+    .nav-list__wrapper-mobil {
+        display: block;
+        margin-right: 2%;
+    }
+
+    .wrapper-catalogue {
+        .wrapper-catalogue__show-list {
+
+            margin-top: 23px !important;
+            margin-bottom: 0 !important;
+        }
+    }
+
+    .nav-list {
+        .wrapper-icon {
+            margin-left: 3%;
+        }
+    }
+}

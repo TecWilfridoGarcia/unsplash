@@ -1,0 +1,103 @@
+.wrapper-icon {
+  .logo-home {
+    width: 124px;
+  }
+}
+
+.show-cube {
+  margin-right: 12px;
+
+  img {
+    min-height: 14px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.show-list {
+  margin-left: 12px;
+
+  img {
+    min-height: 14px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//Grid
+.massonry {
+  columns: 3;
+  grid-gap: 30px;
+  margin-top: 75px;
+  position: relative;
+  @media only screen and (max-width : 768px) {
+    columns: 2;
+    margin-top: 20px;
+    grid-gap: 20px;
+  }
+
+  &__item {
+    background-color: $color-gray-f6;
+    break-inside: avoid;
+    padding: 10px;
+    margin-bottom: 32px;
+    position: relative;
+
+    &__image {
+      width: 100%;
+    }
+
+    &__description {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      background: #ff5672;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+      transition: all 1s ease;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
+      }
+
+      .name-logo {
+        border-bottom: 1px solid white;
+        width: 58%;
+        color: white;
+        font-size: 18px;
+        padding-bottom: 26px;
+        font-family: "Questrial", sans-serif;
+        font-weight: bold;
+        letter-spacing: 5px;
+      }
+
+      .description {
+        width: 58%;
+        color: white;
+        font-size: 20px;
+        font-family: $questrial;
+      }
+    }
+  }
+}
+.icon-search {
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+}

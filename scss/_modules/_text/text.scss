@@ -1,0 +1,27 @@
+.slogan-main {
+display: flex;
+   flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .slogan-main__title {
+        text-align: center;
+        font-size: $font-big;
+        color: $color-white-ff;
+        font-family: $montserrat;
+        font-weight: bold;
+        margin-top: 19%;
+        margin-bottom: 48px;
+    }
+    .slogan-main__subtitle {
+        text-align: center;
+        font-size: $font-small;
+        color: $color-white-ff;
+        font-family: $questrial;
+        width: 100%;
+        max-width: 413px;
+        margin-bottom: 63px;
+        @media only screen and (max-width : 768px) {
+           width: 57%;  
+        }
+    }
+}

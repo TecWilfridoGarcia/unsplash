@@ -1,0 +1,37 @@
+body {
+
+    .container {
+        margin-left: 280px;
+        margin-right: 280px;
+        @media only screen and (max-width : 768px) {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        @media only screen and (max-width : 1500px) {
+            margin-left: 120px;
+            margin-right: 120px;
+        }
+    }
+
+    .banner {
+        width: 100%;
+        height: 900px;
+        background: $color-pink-ff;
+    }
+
+    .wrapper-catalogue {
+        .wrapper-catalogue__show-list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 73px;
+            margin-bottom: 81px;
+        }
+    }
+    .show-more {
+            width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    }
+}

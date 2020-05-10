@@ -1,0 +1,32 @@
+.footer-gnrl {
+    height: 227px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    &__text {
+        color: #a3a3a3;
+        font-family: $questrial;
+    }
+
+    .content-icon {
+        width: 150px;
+        margin-top: 50px;
+
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: auto;
+            padding: initial;
+
+            .item-icon {
+                .img {
+                    width: 100%;
+                    max-width: 17px;
+                }
+            }
+        }
+    }
+}

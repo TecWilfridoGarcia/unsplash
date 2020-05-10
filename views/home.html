@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&family=Questrial&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>SNEAK</title>
+</head>
+
+<body class="main">
+  <header class="main__nav">
+    <div class="nav-list">
+      <div class="wrapper-icon">
+        <img class="logo-home" src="../assets/logo.png" alt="">
+      </div>
+      <div class="nav-list__wrapper">
+        <ul class="nav-list">
+          <li class="nav-list__item nav-list__item--active"><a href="">All</a></li>
+          <li class="nav-list__item"><a href="">Branding</a></li>
+          <li class="nav-list__item"><a href="">Web</a></li>
+          <li class="nav-list__item"><a href="">Photography</a></li>
+          <li class="nav-list__item"><a href="">App</a></li>
+          <li class="nav-list__search">
+            <input onchange="searchPhotos(event)" type="text" class="search" id="search">
+          </li>
+        </ul>
+      </div>
+      <div class="nav-list__wrapper-mobil">
+        <input type="checkbox" id="show-menu">
+        <label for="show-menu"><img src="../assets/menu_open-24px.svg" alt=""></label>
+        <ul class="nav-list-mobil" id="sidebar">
+          <li class="closed"><label for="show-menu">X</label></li>
+          <li class="nav-list__item nav-list__item--active"><a href="">All</a></li>
+          <li class="nav-list__item"><a href="">Branding</a></li>
+          <li class="nav-list__item"><a href="">Web</a></li>
+          <li class="nav-list__item"><a href="">Photography</a></li>
+          <li class="nav-list__item"><a href="">App</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </header>
+  <section class="body">
+    <div class="banner">
+      <div class="slogan-main">
+        <h3 class="slogan-main__title">EXPLORE BEYOND HORIZON</h3>
+        <p class="slogan-main__subtitle">Magna mundi referrentur quo, no rebum dignissim qui.
+          Per quodsi accusata id, agam labores.</p>
+        <button type="submit" class="btn btn--white">VIEW OUR WORK</button>
+      </div>
+    </div>
+    <div class="wrapper-catalogue">
+      <div class="wrapper-catalogue__show-list">
+        <div class="show-cube"><img src="../assets/dashboard-black-18dp.svg" alt=""></div>
+        <div class="show-list"><img src="../assets/view_list-24px.svg" alt=""></div>
+      </div>
+    </div>
+    <header class="main__nav main__nav--center">
+      <div class="nav-list__wrapper">
+        <ul class="nav-list__center">
+          <li class="nav-list__item nav-list__item--active"><a href="">All</a></li>
+          <li class="nav-list__item"><a href="">Branding</a></li>
+          <li class="nav-list__item"><a href="">Web</a></li>
+          <li class="nav-list__item"><a href="">Photography</a></li>
+          <li class="nav-list__item"><a href="">App</a></li>
+        </ul>
+      </div>
+      </div>
+    </header>
+    <div class="container massonry" id="photos">
+    </div>
+    <div class="show-more">
+      <button type="submit" class="btn btn--pink">Show Me More</button>
+    </div>
+  </section>
+  <footer class="footer-gnrl">
+    <p class="footer-gnrl__text">2016 - <span>Sneak</span> All Right Reserved</p>
+    <div class="content-icon">
+      <ul class="content-icon__list">
+        <li class="item-icon"><img class="img" src="../assets/facebook.svg" alt=""></li>
+        <li class="item-icon"><img class="img" src="../assets/twiter.svg" alt=""></li>
+        <li class="item-icon"><img class="img" src="../assets/drible.svg" alt=""></li>
+        <li class="item-icon"><img class="img" src="../assets/google-plus.svg" alt=""></li>
+        <li class="item-icon"><img class="img" src="../assets/youtube.svg" alt=""></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
