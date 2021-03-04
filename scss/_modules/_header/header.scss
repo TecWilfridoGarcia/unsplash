@@ -131,7 +131,6 @@
   }
 
   .nav-list-mobil {
-
     .closed {
       display: flex;
       justify-content: flex-end;
@@ -143,6 +142,7 @@
     }
     .container-li {
       position: relative;
+      cursor: pointer;
     }
     input {
       opacity: 0;
@@ -176,13 +176,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   input {
     position: absolute;
     cursor: pointer;
     &:checked {
       ~ {
         .checkmark {
-          background-color: #2196f3;
+          background-color: red;
         }
       }
     }
