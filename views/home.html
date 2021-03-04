@@ -19,13 +19,13 @@
       </div>
       <div class="nav-list__wrapper">
         <ul class="nav-list">
-          <li class="nav-list__item nav-list__item--active"><a href="">All</a></li>
-          <li class="nav-list__item"><a href="">Branding</a></li>
-          <li class="nav-list__item"><a href="">Web</a></li>
-          <li class="nav-list__item"><a href="">Photography</a></li>
-          <li class="nav-list__item"><a href="">App</a></li>
+          <li class="nav-list__item nav-list__item--active"><button class="item__category">All</button></li>
+          <li class="nav-list__item"><button class="item__category">Branding</button></li>
+          <li class="nav-list__item"><button class="item__category">Web</button></li>
+          <li class="nav-list__item"><button class="item__category">Photography</button></li>
+          <li class="nav-list__item"><button class="item__category">App</button></li>
           <li class="nav-list__search">
-            <input onchange="searchPhotos(event)" type="text" class="search" id="search">
+            <input onchange="" type="text" class="search" id="searchBar">
           </li>
         </ul>
       </div>
@@ -33,13 +33,28 @@
         <input type="checkbox" id="show-menu">
         <label for="show-menu"><img src="../assets/menu_open-24px.svg" alt=""></label>
         <ul class="nav-list-mobil" id="sidebar">
-          <li class="closed"><label for="show-menu">X</label></li>
-          <li class="nav-list__item nav-list__item--active"><a href="">All</a></li>
-          <li class="nav-list__item"><a href="">Branding</a></li>
-          <li class="nav-list__item"><a href="">Web</a></li>
-          <li class="nav-list__item"><a href="">Photography</a></li>
-          <li class="nav-list__item"><a href="">App</a></li>
-
+          <li class="closed"><label for="show-menu"><img src="../assets/close.svg" alt=""></label></li>
+          <li class="nav-list__item">
+            <input type="radio" id="all" name="category" checked>
+            <label for="all" class="container-li checkmark" > All
+       </label>
+          </li>
+          <li class="nav-list__item">
+            <input type="radio" id="branding" name="category" >
+            <label for="branding" class="container-li checkmark" > Branding</label>
+          </li>
+          <li class="nav-list__item">
+            <input type="radio" id="web" name="category">
+            <label for="web" class="container-li checkmark" >Web</label>
+          </li>
+          <li class="nav-list__item">
+            <input type="radio" id="photography" name="category">
+            <label for="photography" class="container-li checkmark" >Photography</label>
+          </li>
+          <li class="nav-list__item">
+            <input type="radio" id="app" name="category">
+            <label for="app" class="container-li checkmark" >App</label>
+          </li>
         </ul>
       </div>
     </div>
@@ -55,26 +70,51 @@
     </div>
     <div class="wrapper-catalogue">
       <div class="wrapper-catalogue__show-list">
-        <div class="show-cube"><img src="../assets/dashboard-black-18dp.svg" alt=""></div>
-        <div class="show-list"><img src="../assets/view_list-24px.svg" alt=""></div>
+        <div class="show-cube"> 
+          <input checked type="radio" name="show" id="showcube" value="showcube" onchange="changeList(value )" class="radio">
+          <label class="label" for="showcube">
+           <img src="../assets/dashboard-black-18dp.svg" alt=""> 
+          </label>
+        </div>
+        <div class="show-list">
+          <input type="radio" name="show" value="showlist" id="showlist" onchange="changeList(value)"  class="radio">
+          <label class="label" for="showlist">
+            <img src="../assets/view_list-24px.svg" alt=""> 
+          </label>
+        </div>
       </div>
     </div>
     <header class="main__nav main__nav--center">
       <div class="nav-list__wrapper">
         <ul class="nav-list__center">
-          <li class="nav-list__item nav-list__item--active"><a href="">All</a></li>
-          <li class="nav-list__item"><a href="">Branding</a></li>
-          <li class="nav-list__item"><a href="">Web</a></li>
-          <li class="nav-list__item"><a href="">Photography</a></li>
-          <li class="nav-list__item"><a href="">App</a></li>
+          <li class="nav-list__item">
+            <input type="radio" id="all" name="category" checked>
+            <label for="all" class="container-li checkmark" > All
+       </label>
+          </li>
+          <li class="nav-list__item">
+            <input type="radio" id="branding" name="category" >
+            <label for="branding" class="container-li checkmark" > Branding</label>
+          </li>
+          <li class="nav-list__item">
+            <input type="radio" id="web" name="category">
+            <label for="web" class="container-li checkmark" >Web</label>
+          </li>
+          <li class="nav-list__item">
+            <input type="radio" id="photography" name="category">
+            <label for="photography" class="container-li checkmark" >Photography</label>
+          </li>
+          <li class="nav-list__item">
+            <input type="radio" id="app" name="category">
+            <label for="app" class="container-li checkmark" >App</label>
+          </li>
         </ul>
       </div>
       </div>
     </header>
-    <div class="container massonry" id="photos">
-    </div>
+    <div class="container massonry" id="gallery">
     <div class="show-more">
-      <button type="submit" class="btn btn--pink">Show Me More</button>
+      <button type="button" class="btn btn--pink"  id="loadMore">Show Me More</button>
     </div>
   </section>
   <footer class="footer-gnrl">
@@ -88,8 +128,9 @@
         <li class="item-icon"><img class="img" src="../assets/youtube.svg" alt=""></li>
       </ul>
     </div>
-  </footer>
-  <script src="../js/main.js"></script>
+ </footer>
+  <script src="../js/data.js"></script>
+  <script src="../js/index.js"></script>
 </body>
 
 </html>

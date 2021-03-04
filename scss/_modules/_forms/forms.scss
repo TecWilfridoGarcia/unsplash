@@ -1,14 +1,21 @@
 .search {
-    background-image: url('../../../assets/search-24px.svg');
-    background-repeat: no-repeat;
-    background-color: transparent;
-    border: none;
-    font-size: 16px;
-    padding: 6px;
-    background-position-y: 50%;
-    color: $color-gray-a3;
-    &:focus {
-        outline: none;
-    }
+  background-image: url("../../../assets/search-24px.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  padding: 6px;
+  background-position-y: 50%;
+  color: black;
+  padding-left: 25px;
+  &:focus {
+    outline: none;
+  }
+}
 
+.label {
+  cursor: pointer;
+}
+.radio {
+  opacity: 0;
 }

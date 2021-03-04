@@ -1,21 +1,19 @@
 .btn {
-    width: 171px;
-    height: 40px;
-    font-weight: normal;
-    font-size: $font-small - 5;
-    border: none;
-    &--white {
-        background-color: $color-white-ff;
-        color: $color-pink-ff;
-    }
-    &--pink {
-        background-color: $color-pink-ff;
-        color: $color-white-ff;
-    }
+  width: 171px;
+  height: 40px;
+  font-weight: normal;
+  font-size: $font-small - 5;
+  &--white {
+    background-color: $color-white-ff;
+    color: $color-pink-ff;
+  }
+  &--pink {
+    background-color: $color-pink-ff;
+    color: $color-white-ff;
+  }
 
-    &:hover {
-        background-color: $color-pink-ff;
-        color: $color-white-ff;
-
-    }
+  &:hover {
+    background-color: $color-pink-ff;
+    color: $color-white-ff;
+  }
 }

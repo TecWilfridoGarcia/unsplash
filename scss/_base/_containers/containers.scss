@@ -1,37 +1,59 @@
 body {
-
-    .container {
-        margin-left: 280px;
-        margin-right: 280px;
-        @media only screen and (max-width : 768px) {
-            margin-left: 20px;
-            margin-right: 20px;
-        }
-        @media only screen and (max-width : 1500px) {
-            margin-left: 120px;
-            margin-right: 120px;
-        }
+  .container {
+    margin-left: 280px;
+    margin-right: 280px;
+    margin-top: 60px;
+    @media only screen and (max-width: 768px) {
+      margin-left: 20px !important;
+      margin-right: 20px !important;
+      margin-top: 20px;
     }
-
-    .banner {
-        width: 100%;
-        height: 900px;
-        background: $color-pink-ff;
+    @media only screen and (max-width: 1500px) {
+      margin-left: 120px;
+      margin-right: 120px;
+      margin-top: 60px;
     }
+  }
 
-    .wrapper-catalogue {
-        .wrapper-catalogue__show-list {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 73px;
-            margin-bottom: 81px;
-        }
+  .banner {
+    width: 100%;
+    height: 900px;
+    background: $color-pink-ff;
+  }
+
+  .wrapper-catalogue {
+    .wrapper-catalogue__show-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 73px;
+      margin-bottom: 81px;
     }
-    .show-more {
-            width: 100%;
+  }
+  .show-more {
+    width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 40px;
-    }
+  }
+}
+
+.none {
+  display: none;
+}
+
+
+
+
+
+
+.hiddenStyle {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
