@@ -28,6 +28,7 @@
             <input onchange="" type="text" class="search" id="searchBar">
           </li>
         </ul>
+
       </div>
       <div class="nav-list__wrapper-mobil">
         <input name="category" type="checkbox" id="show-menu">
@@ -35,24 +36,24 @@
         <ul class="nav-list-mobil" id="sidebar">
           <li class="closed"><label for="show-menu"><img src="../assets/close.svg" alt=""></label></li>
           <li class="nav-list__item">
-            <input name="category" type="radio" id="all-mobil" checked>
+            <input class="selected-category" name="category" value="all" type="radio" id="all-mobil" checked>
             <label for="all-mobil" class="container-li checkmark" > All
        </label>
           </li>
           <li class="nav-list__item">
-            <input name="category" type="radio" id="branding-mobil" >
+            <input class="selected-category" name="category" value="branding" type="radio" id="branding-mobil" >
             <label for="branding-mobil" class="container-li checkmark" > Branding</label>
           </li>
           <li class="nav-list__item">
-            <input name="category" type="radio" id="web-mobil">
+            <input class="selected-category" name="category" value="web" type="radio" id="web-mobil">
             <label for="web-mobil" class="container-li checkmark" >Web</label>
           </li>
           <li class="nav-list__item">
-            <input name="category" type="radio" id="photography-mobil">
+            <input class="selected-category" name="category" value="photography" type="radio" id="photography-mobil">
             <label for="photography-mobil" class="container-li checkmark" >Photography</label>
           </li>
           <li class="nav-list__item">
-            <input name="category" type="radio" id="app-mobil">
+            <input class="selected-category" name="category" value="app" type="radio" id="app-mobil">
             <label for="app-mobil" class="container-li checkmark" >App</label>
           </li>
         </ul>
@@ -88,25 +89,25 @@
       <div class="nav-list__wrapper">
         <ul class="nav-list__center">
           <li class="nav-list__item">
-            <input name="categories" type="radio" id="all" checked>
-            <label for="all" class="container-li checkmark" > All
+            <input class="selected-category" name="categories" type="radio" value="all" id="all" checked>
+            <label for="all" class="container-li checkmark"> All
        </label>
           </li>
           <li class="nav-list__item">
-            <input name="categories" type="radio" id="branding" >
+            <input class="selected-category" name="categories" type="radio" value="branding" id="branding" >
             <label for="branding" class="container-li checkmark" > Branding</label>
           </li>
           <li class="nav-list__item">
-            <input name="categories" type="radio" id="web">
-            <label for="web" class="container-li checkmark" >Web</label>
+            <input class="selected-category" name="categories" type="radio" value="web" id="web">
+            <label for="web" class="container-li checkmark">Web</label>
           </li>
           <li class="nav-list__item">
-            <input name="categories" type="radio" id="photography">
-            <label for="photography" class="container-li checkmark" >Photography</label>
+            <input class="selected-category" name="categories" type="radio" value="photography" id="photography">
+            <label for="photography" class="container-li checkmark">Photography</label>
           </li>
           <li class="nav-list__item">
-            <input name="categories" type="radio" id="app">
-             <label for="app" class="container-li checkmark">App</label>
+            <input class="selected-category" name="categories" type="radio" value="app" id="app">
+             <label for="app" class="container-li checkmark" >App</label>
           </li>
         </ul>
       </div>

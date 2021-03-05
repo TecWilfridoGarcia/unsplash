@@ -1,32 +1,18 @@
-
-let imageList = document.querySelector("#gallery");
+const imageList = document.querySelector("#gallery");
 const searchBar = document.getElementById('searchBar');
-const branding = document.getElementById('branding');
-const massonryItem = document.querySelectorAll('.massonry_item');
-const listaItem = document.querySelectorAll('.lista__item');
 const showList = document.querySelectorAll('.radio');
-var radioValues = []
+const showMenu = document.getElementById('show-menu');
+const selectedCategories = document.querySelectorAll(".selected-category");
+
 let hpCharacters = [];
 
-const showMenu = document.getElementById('show-menu');
 showMenu.addEventListener('change', function () {
-    if (document.getElementById('show-menu').checked == true) {
+    if (document.getElementById('show-menu').checked) {
         document.getElementById('sidebar').classList.add('actived')
     } else {
         document.getElementById('sidebar').classList.remove('actived')
     }
 })
-
-searchBar.addEventListener('keyup', (e) => {
-    const searchString = e.target.value.toLowerCase();
-
-    const filteredCharacters = hpCharacters.filter((image) => {
-        return (
-            image.author.toLowerCase().includes(searchString)
-        );
-    });
-    displayCharacters(filteredCharacters);
-});
 
 const loadCharacters = async () => {
     try {
@@ -39,6 +25,15 @@ const loadCharacters = async () => {
 
 };
 
+searchBar.addEventListener('keyup', (e) => {
+    const searchString = e.target.value.toLowerCase();
+    const filteredCharacters = hpCharacters.filter((image) => {
+        return (
+            image.author.toLowerCase().includes(searchString)
+        );
+    });
+    displayCharacters(filteredCharacters);
+});
 
 const displayCharacters = (characters) => {
     const htmlString = characters
@@ -65,6 +60,22 @@ const displayCharacters = (characters) => {
 
 loadCharacters();
 
+selectedCategories.forEach((selectedCategory) => {
+    selectedCategory.addEventListener("click", (event) => {
+        const selectCategory = event.target.value.toLowerCase();
+        const resultado = hpCharacters.filter((image) => {
+            if (selectCategory === "all") {
+                return (
+                    image.category.toLowerCase()
+                );
+            }
+            return (
+                image.category.toLowerCase().includes(selectCategory)
+            );
+        });
+        displayCharacters(resultado);
+    });
+});
 
 const changeList = (value) => {
     if (value === "showlist") {
@@ -81,4 +92,18 @@ const changeList = (value) => {
 
 }
 
-
+// The lazy loading observer
+function lazyLoad(target) {
+    const obs = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                const src = img.getAttribute('data-lazy');
+                img.setAttribute('src', src);
+                img.classList.add('fadeIn');
+                observer.disconnect();
+            }
+        });
+    });
+    obs.observe(target);
+}
